@@ -11,22 +11,22 @@
 
         <article class="content fr">
 
-            <% for(var i=0;i<10;i++){ %>
-                <section class="post">
-                    <h2 class="post-title"><a href="#">我为什么还要坚持写博客？</a></h2>
-                    <div class="post-con">
-                        <p><img src="upload/1.jpg" alt="" width="100%"/></p>
-                        <p>最近有点累过头，大概是物极必反，之前模糊的情绪忽然长出了脚， 让我可以捉住它们。 上周的年会意外取消，挺讨厌的，就因为要开年会我才取消了同学聚会，结果年会还开不了！马上放假了，年前老同学肯定要约出来聚聚的。 有时候挺累的，却一直在坚持，不知道你们是否也一样还在坚持？[......]<a class="more" href="#">阅读全文</a></p>
-                    </div>
-                    <div class="post-meta cf">
-                        <div class="post-date">2014-01-21</div>
-                        <div class="post-cat"><a href="">时光日记</a></div>
-                        <div class="post-views">231 views</div>
-                        <div class="post-comment-num"><a href="">32条评论</a></div>
-                        <a class="post-readmore" href="#"></a>
-                    </div>
-                </section>
-            <% } %>
+            <% doc.forEach(function(post,index){  %>
+            <section class="post">
+                <h2 class="post-title"><a href="#"><%= post.post_title %></a></h2>
+                <div class="post-con">
+                    <p><img src="upload/1.jpg" alt="" width="100%"/></p>
+                    <p>最近有点累过头，大概是物极必反，之前模糊的情绪忽然长出了脚， 让我可以捉住它们。 上周的年会意外取消，挺讨厌的，就因为要开年会我才取消了同学聚会，结果年会还开不了！马上放假了，年前老同学肯定要约出来聚聚的。 有时候挺累的，却一直在坚持，不知道你们是否也一样还在坚持？[......]<a class="more" href="#">阅读全文</a></p>
+                </div>
+                <div class="post-meta cf">
+                    <div class="post-date">2014-01-21</div>
+                    <div class="post-cat"><a href="">时光日记</a></div>
+                    <div class="post-views">231 views</div>
+                    <div class="post-comment-num"><a href="">32条评论</a></div>
+                    <a class="post-readmore" href="#"></a>
+                </div>
+            </section>
+            <% }) %>
 
             <nav class="pagenav">
                 <div class="nav-info">第 1 页，共 36 页</div>
@@ -36,6 +36,7 @@
                 <a href="">4</a>
                 <a href="">5</a>
             </nav>
+
         </article>
     </div>
 </div>
